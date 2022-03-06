@@ -73,6 +73,7 @@ public class AuthorizationServerConfiguration {
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_POST)
                 .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
                 .tokenSettings(tokenSettings())
+                .scope("access-hello")
                 .build();
 
         return new InMemoryRegisteredClientRepository(registeredClient1);
